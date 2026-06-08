@@ -1,18 +1,17 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { delay } from "framer-motion";
 
 const SOCIAL_LINKS = [
-  { label: "GitHub",     handle: "@Ankit69Dev",      href: "https://github.com/Ankit69Dev",   color: "var(--neon-green)",
+  { label: "GitHub",     handle: "Ankit69Dev",      href: "https://github.com/Ankit69Dev",   color: "var(--neon-green)",
     icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> },
-  { label: "LinkedIn",   handle: "Ankit Pandey",       href: "https://www.linkedin.com/in/ankit-pandey0304/", color: "var(--neon-blue)",
+  { label: "LinkedIn",   handle: "Ankit Pandey",       href: "https://linkedin.com/in/ankit-pandey0304", color: "var(--neon-blue)",
     icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> },
-  { label: "Instagram", handle: "Ankit Pandey",          href: "https://www.instagram.com/ankit.pandey03/?hl=en",  color: "var(--neon-purple)",
+  { label: "Instagram", handle: "Ankit Pandey",          href: "https://instagram.com/ankit.pandey03",  color: "var(--neon-pink)",
     icon: <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-instagram" viewBox="0 0 16 16">
   <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
 </svg> },
-  { label: "Email",       handle: "pandeyankit0581@gmail.com",  href: "mailto:pandeyankit0581@gmail.com", color: "var(--neon-orange)",
+  { label: "Email",       handle: "pandeyankit03@gmail.com",  href: "mailto:pandeyankit03@gmail.com", color: "var(--neon-orange)",
     icon: <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg> },
 ];
 
@@ -43,9 +42,9 @@ export default function Contact() {
     if (!form.name || !form.email || !form.message) return;
     setStatus("sending");
     setTerminalLines([]);
-    const lines = [`$ connecting to mail.server...`, `> auth: OK`, `> from: ${form.email}`, `> to: ankit@example.dev`, `> subject: ${form.subject || "(no subject)"}`, `> sending payload...`];
-    for (const line of lines) { await delay(280); setTerminalLines((p) => [...p, line]); }
-    await delay(400);
+    // const lines = [`$ connecting to mail.server...`, `> auth: OK`, `> from: ${form.email}`, `> to: ankit@example.dev`, `> subject: ${form.subject || "(no subject)"}`, `> sending payload...`];
+    // for (const line of lines) { await delay(280); setTerminalLines((p) => [...p, line]); }
+    // await delay(400);
     setTerminalLines((p) => [...p, `> ✓ Message delivered!`]);
     setStatus("sent");
     setForm({ name: "", email: "", subject: "", message: "" });
