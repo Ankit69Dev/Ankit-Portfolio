@@ -145,7 +145,7 @@ export default function Hero() {
               { label: "years_exp",        value: "2+"   },
               { label: "projects_shipped", value: "10+"  },
               { label: "technologies",     value: "10+"  },
-              { label: "commits_ytd",      value: "200+" },
+              { label: "commits_ytd",      value: "500+" },
             ].map((stat) => (
               <div key={stat.label}>
                 <div style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? "1.6rem" : "2rem", fontWeight: 800, color: "var(--neon-green)", lineHeight: 1 }} className="glow-green">{stat.value}</div>

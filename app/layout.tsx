@@ -4,6 +4,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Ankit Pandey | Full Stack Developer",
   description: "Full Stack Developer specializing in building exceptional digital experiences",
+  icons:{
+    icon: "/photo.jpg",
+  }
 };
 
 export default function RootLayout({
