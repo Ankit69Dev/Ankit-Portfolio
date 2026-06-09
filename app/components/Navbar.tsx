@@ -42,7 +42,7 @@ export default function Navbar() {
       transition: "all 0.4s ease",
     }}>
       {/* Logo */}
-      <a href="#" style={{ fontFamily: "'Orbitron', sans-serif", fontWeight: 700, fontSize: "1.1rem", color: "var(--neon-green)", textDecoration: "none", letterSpacing: "0.1em" }} className="glow-green">
+      <a href="#" style={{ fontFamily: "'Syne', sans-serif", fontWeight: 700, fontSize: "1.1rem", color: "var(--neon-green)", textDecoration: "none", letterSpacing: "0.1em" }} className="glow-green">
         ANKIT PANDEY<span style={{ color: "var(--neon-blue)" }}>_</span>
       </a>
 
@@ -59,7 +59,7 @@ export default function Navbar() {
 
       {/* Clock — hidden on mobile */}
       {!isMobile && (
-        <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.15em", display: "flex", alignItems: "center", gap: "8px" }}>
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "var(--text-muted)", letterSpacing: "0.15em", display: "flex", alignItems: "center", gap: "8px" }}>
           <span style={{ color: "var(--neon-green)", fontSize: "0.6rem" }}>●</span>
           {time}
           <span style={{ color: "rgba(0,255,136,0.3)" }}>IST</span>
@@ -69,7 +69,7 @@ export default function Navbar() {
       {/* Mobile: clock + hamburger */}
       {isMobile && (
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.65rem", color: "var(--text-muted)" }}>{time}</span>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.65rem", color: "var(--text-muted)" }}>{time}</span>
           <button onClick={() => setMenuOpen(!menuOpen)} style={{ background: "none", border: "1px solid rgba(0,255,136,0.3)", color: "var(--neon-green)", cursor: "pointer", fontSize: "1rem", padding: "4px 10px", lineHeight: 1 }}>
             {menuOpen ? "✕" : "☰"}
           </button>

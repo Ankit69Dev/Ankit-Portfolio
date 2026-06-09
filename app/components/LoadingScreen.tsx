@@ -62,8 +62,8 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
             <div className="terminal-dot" style={{ background: "#febc2e" }} />
             <div className="terminal-dot" style={{ background: "#28c840" }} />
           </div>
-          <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.62rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>boot.sh — ankit-portfolio</span>
-          <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.6rem", color: "rgba(0,255,136,0.4)" }}>{progress}%</span>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.62rem", color: "var(--text-muted)", letterSpacing: "0.08em" }}>boot.sh — ankit-portfolio</span>
+          <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.6rem", color: "rgba(0,255,136,0.4)" }}>{progress}%</span>
         </div>
 
         {/* Body */}
@@ -71,15 +71,15 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
           {/* ASCII logo — smaller on mobile */}
           {!isMobile && (
             <div style={{ marginBottom: "16px" }}>
-              <pre style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.55rem", color: "rgba(0,255,136,0.6)", lineHeight: 1.2, letterSpacing: "0.04em" }}>
+              <pre style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.55rem", color: "rgba(0,255,136,0.6)", lineHeight: 1.2, letterSpacing: "0.04em" }}>
               </pre>
-              <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.55rem", color: "rgba(0,255,136,0.3)", letterSpacing: "0.18em", marginTop: "4px" }}>ANKIT PANDEY // FULL STACK DEVELOPER</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.55rem", color: "rgba(0,255,136,0.3)", letterSpacing: "0.18em", marginTop: "4px" }}>ANKIT PANDEY // FULL STACK DEVELOPER</div>
             </div>
           )}
           {isMobile && (
             <div style={{ marginBottom: "16px" }}>
-              <div style={{ fontFamily: "'Orbitron', sans-serif", fontSize: "1.1rem", fontWeight: 900, color: "var(--neon-green)" }} className="glow-green">AP_</div>
-              <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.55rem", color: "rgba(0,255,136,0.3)", letterSpacing: "0.15em", marginTop: "4px" }}>FULL STACK DEVELOPER</div>
+              <div style={{ fontFamily: "'Syne', sans-serif", fontSize: "1.1rem", fontWeight: 900, color: "var(--neon-green)" }} className="glow-green">ANKIT PANDEY_</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.55rem", color: "rgba(0,255,136,0.3)", letterSpacing: "0.15em", marginTop: "4px" }}>FULL STACK DEVELOPER</div>
             </div>
           )}
 
@@ -88,7 +88,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
           {/* Boot lines */}
           <div style={{ display: "flex", flexDirection: "column", gap: "1px" }}>
             {BOOT_LINES.slice(0, visibleLines).map((line, i) => (
-              <div key={i} style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: isMobile ? "0.62rem" : "0.68rem", lineHeight: 1.85, display: "flex", justifyContent: "space-between", animation: "fadeInLine 0.2s ease" }}>
+              <div key={i} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: isMobile ? "0.62rem" : "0.68rem", lineHeight: 1.85, display: "flex", justifyContent: "space-between", animation: "fadeInLine 0.2s ease" }}>
                 {line.text.startsWith(">") ? (
                   <span style={{ color: "var(--neon-green)", fontWeight: "bold", textShadow: "0 0 10px rgba(0,255,136,0.5)" }}>{line.text}</span>
                 ) : (
@@ -102,7 +102,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
 
             {/* Typing line */}
             {visibleLines < BOOT_LINES.length && (
-              <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: isMobile ? "0.62rem" : "0.68rem", lineHeight: 1.85, color: "rgba(224,240,255,0.7)", display: "flex", alignItems: "center" }}>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: isMobile ? "0.62rem" : "0.68rem", lineHeight: 1.85, color: "rgba(224,240,255,0.7)", display: "flex", alignItems: "center" }}>
                 <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{currentTyping}</span>
                 <span className="cursor-blink" style={{ display: "inline-block", width: "7px", height: "12px", background: "var(--neon-green)", verticalAlign: "middle", marginLeft: "1px", flexShrink: 0 }} />
               </div>
@@ -117,7 +117,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
               <div style={{ position: "absolute", top: 0, right: 0, width: "20px", height: "100%", background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent)", animation: "shimmer 1s linear infinite" }} />
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-between", marginTop: "6px", fontFamily: "'Share Tech Mono', monospace", fontSize: "0.52rem", color: "var(--text-muted)" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", marginTop: "6px", fontFamily: "'JetBrains Mono', monospace", fontSize: "0.52rem", color: "var(--text-muted)" }}>
             <span>initializing system</span>
             <span style={{ color: progress === 100 ? "var(--neon-green)" : "var(--text-muted)" }}>{progress === 100 ? "COMPLETE" : "LOADING..."}</span>
           </div>
@@ -125,7 +125,7 @@ export default function LoadingScreen({ onComplete }: { onComplete: () => void }
       </div>
 
       {/* Skip hint */}
-      <div style={{ marginTop: "24px", fontFamily: "'Share Tech Mono', monospace", fontSize: "0.55rem", color: "rgba(255,255,255,0.1)", letterSpacing: "0.18em", animation: "blink 2s ease-in-out infinite" }}>
+      <div style={{ marginTop: "24px", fontFamily: "'JetBrains Mono', monospace", fontSize: "0.55rem", color: "rgba(255,255,255,0.1)", letterSpacing: "0.18em", animation: "blink 2s ease-in-out infinite" }}>
         {isMobile ? "TAP TO SKIP" : "PRESS ANY KEY TO SKIP"}
       </div>
 
