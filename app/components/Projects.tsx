@@ -5,27 +5,27 @@ import { useIsMobile } from "@/hooks/useIsMobile";
 const PROJECTS = [
   {
     id: "01", name: "Smart Trip Planner", tagline: "AI-Powered Travel Planning Platform",
-    description: "AI-powered travel planner that creates personalized itineraries, recommends destinations, and helps travelers plan smarter trips effortlessly..",
+    description: "AI-powered travel planner that creates personalized itineraries, recommends destinations, and helps travelers plan smarter trips effortlessly.",
     stack: ["Next.js", "React", "PostgreSQL", "Tailwind CSS", "OpenStreetMap API"],
     github: "https://github.com/Ankit69Dev", live: "https://ai-smart-trip-planner.vercel.app/", color: "var(--neon-green)", status: "PRODUCTION", lines: "12,400",
   },
   {
     id: "02", name: "SpendWise AI", tagline: "Personal Expense Management Platform",
     description: "AI-powered expense tracker that helps users manage spending, track budgets, and gain smart financial insights for better money decisions.",
-    stack: ["React", "Node.js", "TypeScript", "Tailwind CSS", "GroqAI API"],
+    stack: ["React", "PostgreSQL", "TypeScript", "Tailwind CSS", "GroqAI API"],
     github: "https://github.com/Ankit69Dev", live: "https://ai-expense-tracker-spendwise-green.vercel.app/", color: "var(--neon-blue)", status: "PRODUCTION", lines: "9,200",
   },
   {
     id: "03", name: "Anonymous Feedback Box", tagline: "Feedback & Communication Platform",
     description: "Anonymous feedback platform that allows users to share honest opinions, suggestions, and reviews securely without revealing their identity.",
-    stack: ["TypeScript", "GraphQL", "Express", "Prisma", "Jest"],
+    stack: ["TypeScript", "Tailwind CSS", "React", "Prisma", "PostgreSQL"],
     github: "https://github.com/Ankit69Dev", live: "https://anonymous-feedback-box.vercel.app/", color: "var(--neon-purple)", status: "PRODUCTION", lines: "6,800",
   },
   {
-    id: "04", name: "ThreadOS", tagline: "Async task queue & scheduler",
-    description: "A distributed task queue built in Node.js with priority queues, retries, dead-letter queues, and a real-time web UI.",
+    id: "04", name: "AI Mood Journal", tagline: "Mood Tracking Platform",
+    description: "AI-powered mood journal that helps users track emotions, reflect on daily experiences, and gain personalized insights to improve mental well-being and self-awareness.",
     stack: ["Node.js", "Redis", "BullMQ", "React", "WebSockets"],
-    github: "#", live: "#", color: "var(--neon-orange)", status: "BETA", lines: "5,100",
+    github: "https://github.com/Ankit69Dev", live: "#", color: "var(--neon-orange)", status: "BETA", lines: "5,100",
   },
 ];
 
@@ -48,9 +48,9 @@ export default function Projects() {
     <section id="projects" ref={ref} style={{ padding: isMobile ? "70px 20px" : "100px 40px", maxWidth: "1200px", margin: "0 auto" }}>
       {/* Section label */}
       <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: isMobile ? "40px" : "64px" }}>
-        <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.7rem", color: "var(--neon-blue)", letterSpacing: "0.2em" }}>02</span>
+        <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "var(--neon-blue)", letterSpacing: "0.2em" }}>02</span>
         <div style={{ width: "40px", height: "1px", background: "var(--neon-blue)", boxShadow: "0 0 8px var(--neon-blue)" }} />
-        <h2 style={{ fontFamily: "'Orbitron', sans-serif", fontSize: isMobile ? "1.1rem" : "1.4rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "0.15em" }}>Projects</h2>
+        <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? "1.1rem" : "1.4rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "0.15em" }}>Projects</h2>
         <div style={{ flex: 1, height: "1px", background: "rgba(0,212,255,0.1)" }} />
       </div>
 
@@ -74,31 +74,31 @@ export default function Projects() {
           >
             {/* Top */}
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-              <span style={{ fontFamily: "'Orbitron', sans-serif", fontSize: "1.8rem", fontWeight: 900, color: project.color, opacity: 0.25, lineHeight: 1 }}>{project.id}</span>
-              <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.12em", color: project.color, border: `1px solid ${project.color}`, padding: "3px 8px", opacity: 0.8 }}>{project.status}</span>
+              <span style={{ fontFamily: "'Syne', sans-serif", fontSize: "1.8rem", fontWeight: 900, color: project.color, opacity: 0.25, lineHeight: 1 }}>{project.id}</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.12em", color: project.color, border: `1px solid ${project.color}`, padding: "3px 8px", opacity: 0.8 }}>{project.status}</span>
             </div>
 
-            <h3 style={{ fontFamily: "'Orbitron', sans-serif", fontSize: isMobile ? "1rem" : "1.1rem", fontWeight: 700, color: project.color, letterSpacing: "0.05em", marginBottom: "4px" }}>{project.name}</h3>
-            <p style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.65rem", color: "var(--text-muted)", marginBottom: "12px", letterSpacing: "0.04em" }}>{project.tagline}</p>
-            <p style={{ fontFamily: "'Rajdhani', sans-serif", fontSize: "0.95rem", color: "rgba(224,240,255,0.55)", lineHeight: 1.7, marginBottom: "20px" }}>{project.description}</p>
+            <h3 style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? "1rem" : "1.1rem", fontWeight: 700, color: project.color, letterSpacing: "0.05em", marginBottom: "4px" }}>{project.name}</h3>
+            <p style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.65rem", color: "var(--text-muted)", marginBottom: "12px", letterSpacing: "0.04em" }}>{project.tagline}</p>
+            <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.95rem", color: "rgba(224,240,255,0.55)", lineHeight: 1.7, marginBottom: "20px" }}>{project.description}</p>
 
             {/* Stack */}
             <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginBottom: "20px" }}>
               {project.stack.map((tech) => (
-                <span key={tech} style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.06em", color: project.color, background: `${project.color}12`, border: `1px solid ${project.color}30`, padding: "3px 8px" }}>{tech}</span>
+                <span key={tech} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.58rem", letterSpacing: "0.06em", color: project.color, background: `${project.color}12`, border: `1px solid ${project.color}30`, padding: "3px 8px" }}>{tech}</span>
               ))}
             </div>
 
             {/* Footer */}
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "14px", borderTop: `1px solid ${project.color}15` }}>
-              <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.58rem", color: "var(--text-muted)" }}>~{project.lines} lines</span>
+              <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.58rem", color: "var(--text-muted)" }}>~{project.lines} lines</span>
               <div style={{ display: "flex", gap: "14px" }}>
-                <a href={project.github} style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.62rem", color: "var(--text-muted)", textDecoration: "none", transition: "color 0.2s" }}
+                <a href={project.github} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.62rem", color: "var(--text-muted)", textDecoration: "none", transition: "color 0.2s" }}
                   onMouseEnter={(e) => (e.currentTarget.style.color = project.color)}
                   onMouseLeave={(e) => (e.currentTarget.style.color = "var(--text-muted)")}>
                   [github]
                 </a>
-                <a href={project.live} style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.62rem", color: project.color, textDecoration: "none" }}>[live →]</a>
+                <a href={project.live} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.62rem", color: project.color, textDecoration: "none" }}>[live →]</a>
               </div>
             </div>
           </div>
@@ -107,8 +107,8 @@ export default function Projects() {
 
       {/* View more */}
       <div style={{ textAlign: "center", marginTop: "40px" }}>
-        <a href="https://github.com/Ankit69Dev" target="_blank" rel="noopener noreferrer"
-          style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--text-muted)", textDecoration: "none", padding: "12px 28px", border: "1px solid rgba(255,255,255,0.08)", transition: "all 0.3s", display: "inline-block" }}
+        <a href="https://github.com/Ankit69Dev?tab=repositories" target="_blank" rel="noopener noreferrer"
+          style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.72rem", letterSpacing: "0.1em", color: "var(--text-muted)", textDecoration: "none", padding: "12px 28px", border: "1px solid rgba(255,255,255,0.08)", transition: "all 0.3s", display: "inline-block" }}
           onMouseEnter={(e) => { e.currentTarget.style.color = "var(--neon-blue)"; e.currentTarget.style.borderColor = "rgba(0,212,255,0.4)"; }}
           onMouseLeave={(e) => { e.currentTarget.style.color = "var(--text-muted)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.08)"; }}>
           ./view-all-on-github

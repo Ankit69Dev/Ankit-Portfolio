@@ -52,16 +52,16 @@ export default function About() {
     { icon: "🎯", label: "Focus",     value: "Full Stack Dev" },
     { icon: "📍", label: "Based in",  value: "India"          },
     { icon: "⚡", label: "Specialty", value: "Performance"    },
-    { icon: "🔭", label: "Exploring", value: "RAG, Kafka, AI/ML"    },
+    { icon: "🔭", label: "Exploring", value: "RAG + AI/ML"    },
   ];
 
   return (
     <section id="about" ref={ref} style={{ padding: isMobile ? "70px 20px" : "100px 40px", maxWidth: "1200px", margin: "0 auto" }}>
       {/* Section label */}
       <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: isMobile ? "40px" : "64px" }}>
-        <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.7rem", color: "var(--neon-green)", letterSpacing: "0.2em" }}>01</span>
+        <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "var(--neon-green)", letterSpacing: "0.2em" }}>01</span>
         <div style={{ width: "40px", height: "1px", background: "var(--neon-green)", boxShadow: "0 0 8px var(--neon-green)" }} />
-        <h2 style={{ fontFamily: "'Orbitron', sans-serif", fontSize: isMobile ? "1.1rem" : "1.4rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "0.15em", textTransform: "uppercase" }}>About</h2>
+        <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? "1.1rem" : "1.4rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "0.15em", textTransform: "uppercase" }}>About</h2>
         <div style={{ flex: 1, height: "1px", background: "rgba(0,255,136,0.1)" }} />
       </div>
 
@@ -70,10 +70,10 @@ export default function About() {
 
         {/* Left */}
         <div>
-          <p style={{ fontFamily: "'Rajdhani', sans-serif", fontSize: "1.05rem", color: "rgba(224,240,255,0.7)", lineHeight: 1.9, marginBottom: "20px" }}>
-            Hey, I'm <span className="neon-green" style={{ fontWeight: 600 }}>Ankit Pandey</span>, a full stack developer who enjoys turning complex problems into elegant, performant solutions. I've been crafting web experiences for <span className="neon-blue">3+ years</span>, working across the entire stack.
+          <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "1.05rem", color: "rgba(224,240,255,0.7)", lineHeight: 1.9, marginBottom: "20px" }}>
+            Hey, I'm <span className="neon-green" style={{ fontWeight: 600 }}>Ankit Pandey</span>, a full stack developer who enjoys turning complex problems into elegant, performant solutions. I've been crafting web experiences for <span className="neon-blue">2+ years</span>, working across the entire stack.
           </p>
-          <p style={{ fontFamily: "'Rajdhani', sans-serif", fontSize: "1.05rem", color: "rgba(224,240,255,0.7)", lineHeight: 1.9, marginBottom: "32px" }}>
+          <p style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "1.05rem", color: "rgba(224,240,255,0.7)", lineHeight: 1.9, marginBottom: "32px" }}>
             My stack centers on <span className="neon-green">React / Next.js</span> on the frontend and <span className="neon-blue">Node.js</span> on the backend, with a strong emphasis on TypeScript, testing, and clean architecture.
           </p>
 
@@ -82,8 +82,8 @@ export default function About() {
             {highlights.map((h) => (
               <div key={h.label} className="terminal-window border-neon" style={{ padding: "14px", transition: "all 0.3s", cursor: "default" }}>
                 <div style={{ fontSize: "1.1rem", marginBottom: "6px" }}>{h.icon}</div>
-                <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.58rem", color: "var(--text-muted)", letterSpacing: "0.1em", marginBottom: "3px" }}>{h.label}</div>
-                <div style={{ fontFamily: "'Rajdhani', sans-serif", fontSize: "0.9rem", fontWeight: 600, color: "var(--neon-green)" }}>{h.value}</div>
+                <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.58rem", color: "var(--text-muted)", letterSpacing: "0.1em", marginBottom: "3px" }}>{h.label}</div>
+                <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: "0.9rem", fontWeight: 600, color: "var(--neon-green)" }}>{h.value}</div>
               </div>
             ))}
           </div>
@@ -95,9 +95,9 @@ export default function About() {
             <div className="terminal-dot" style={{ background: "#ff5f57" }} />
             <div className="terminal-dot" style={{ background: "#febc2e" }} />
             <div className="terminal-dot" style={{ background: "#28c840" }} />
-            <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.65rem", color: "var(--text-muted)", marginLeft: "8px" }}>ankit.config.ts</span>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.65rem", color: "var(--text-muted)", marginLeft: "8px" }}>ankit.config.ts</span>
           </div>
-          <div style={{ padding: isMobile ? "14px" : "20px", fontFamily: "'Share Tech Mono', monospace", fontSize: isMobile ? "0.65rem" : "0.72rem", lineHeight: 1.7, color: "rgba(224,240,255,0.7)", whiteSpace: "pre-wrap", minHeight: isMobile ? "200px" : "340px", overflowX: "auto" }}>
+          <div style={{ padding: isMobile ? "14px" : "20px", fontFamily: "'JetBrains Mono', monospace", fontSize: isMobile ? "0.65rem" : "0.72rem", lineHeight: 1.7, color: "rgba(224,240,255,0.7)", whiteSpace: "pre-wrap", minHeight: isMobile ? "200px" : "340px", overflowX: "auto" }}>
             {syntaxHighlight(CODE_SNIPPET.slice(0, charCount))}
             {charCount < CODE_SNIPPET.length && (
               <span className="cursor-blink" style={{ display: "inline-block", width: "8px", height: "14px", background: "var(--neon-green)", verticalAlign: "middle" }} />

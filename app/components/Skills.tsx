@@ -33,9 +33,9 @@ export default function Skills() {
     <section id="skills" ref={ref} style={{ padding: isMobile ? "70px 20px" : "100px 40px", maxWidth: "1200px", margin: "0 auto" }}>
       {/* Section label */}
       <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: isMobile ? "40px" : "64px" }}>
-        <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.7rem", color: "var(--neon-purple)", letterSpacing: "0.2em" }}>03</span>
+        <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "var(--neon-purple)", letterSpacing: "0.2em" }}>03</span>
         <div style={{ width: "40px", height: "1px", background: "var(--neon-purple)", boxShadow: "0 0 8px var(--neon-purple)" }} />
-        <h2 style={{ fontFamily: "'Orbitron', sans-serif", fontSize: isMobile ? "1.1rem" : "1.4rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "0.15em" }}>Skills</h2>
+        <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? "1.1rem" : "1.4rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "0.15em" }}>Skills</h2>
         <div style={{ flex: 1, height: "1px", background: "rgba(180,0,255,0.1)" }} />
       </div>
 
@@ -60,8 +60,8 @@ export default function Skills() {
                 whiteSpace: "nowrap",
                 flexShrink: 0,
               }}>
-              <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.55rem", color: activeCategory === i ? c.color : "var(--text-muted)", letterSpacing: "0.12em", marginBottom: isMobile ? "2px" : "3px" }}>./{c.prefix}</div>
-              <div style={{ fontFamily: "'Rajdhani', sans-serif", fontSize: isMobile ? "0.85rem" : "0.95rem", fontWeight: 600, color: activeCategory === i ? c.color : "rgba(224,240,255,0.5)" }}>{c.label}</div>
+              <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.55rem", color: activeCategory === i ? c.color : "var(--text-muted)", letterSpacing: "0.12em", marginBottom: isMobile ? "2px" : "3px" }}>./{c.prefix}</div>
+              <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: isMobile ? "0.85rem" : "0.95rem", fontWeight: 600, color: activeCategory === i ? c.color : "rgba(224,240,255,0.5)" }}>{c.label}</div>
             </button>
           ))}
         </div>
@@ -72,14 +72,14 @@ export default function Skills() {
             <div className="terminal-dot" style={{ background: "#ff5f57" }} />
             <div className="terminal-dot" style={{ background: "#febc2e" }} />
             <div className="terminal-dot" style={{ background: "#28c840" }} />
-            <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.65rem", color: "var(--text-muted)", marginLeft: "8px" }}>skills/{cat.prefix.toLowerCase()}.log</span>
+            <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.65rem", color: "var(--text-muted)", marginLeft: "8px" }}>skills/{cat.prefix.toLowerCase()}.log</span>
           </div>
           <div style={{ padding: isMobile ? "20px 16px" : "28px 28px 24px" }}>
             <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
               {cat.skills.map((skill, i) => (
                 <div key={skill.name}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "7px" }}>
-                    <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: isMobile ? "0.68rem" : "0.75rem", color: "rgba(224,240,255,0.8)" }}>{skill.name}</span>
+                    <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: isMobile ? "0.68rem" : "0.75rem", color: "rgba(224,240,255,0.8)" }}>{skill.name}</span>
                     <span style={{ fontFamily: "'Orbitron', monospace", fontSize: "0.62rem", color: cat.color, fontWeight: 700 }}>{animated ? skill.level : 0}%</span>
                   </div>
                   <div style={{ height: "4px", background: "rgba(255,255,255,0.05)", borderRadius: "2px", overflow: "hidden" }}>
@@ -94,7 +94,7 @@ export default function Skills() {
               {[{ label: "Expert", range: "90–100" }, { label: "Proficient", range: "75–89" }, { label: "Competent", range: "60–74" }].map((l) => (
                 <div key={l.label} style={{ display: "flex", alignItems: "center", gap: "6px" }}>
                   <div style={{ width: "16px", height: "2px", background: cat.color, opacity: l.label === "Expert" ? 1 : l.label === "Proficient" ? 0.6 : 0.35 }} />
-                  <span style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.52rem", color: "var(--text-muted)" }}>{l.label} ({l.range})</span>
+                  <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.52rem", color: "var(--text-muted)" }}>{l.label} ({l.range})</span>
                 </div>
               ))}
             </div>
@@ -112,10 +112,10 @@ export default function Skills() {
             {[0.95, 0.9, 0.88, 0.93, 0.85, 0.88].map((v, i) => { const a = (i * Math.PI * 2) / 6 - Math.PI / 2; return <circle key={i} cx={80 + Math.cos(a) * 60 * v} cy={80 + Math.sin(a) * 60 * v} r="3" fill="var(--neon-green)" />; })}
           </svg>
           <div>
-            <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.6rem", color: "var(--text-muted)", letterSpacing: "0.1em", marginBottom: "10px" }}>SKILL RADAR</div>
+            <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.6rem", color: "var(--text-muted)", letterSpacing: "0.1em", marginBottom: "10px" }}>SKILL RADAR</div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
               {["React", "Node", "TypeScript", "SQL", "Docker", "API Design"].map((l) => (
-                <span key={l} style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.6rem", color: "rgba(0,255,136,0.5)", background: "rgba(0,255,136,0.05)", border: "1px solid rgba(0,255,136,0.1)", padding: "3px 10px" }}>{l}</span>
+                <span key={l} style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.6rem", color: "rgba(0,255,136,0.5)", background: "rgba(0,255,136,0.05)", border: "1px solid rgba(0,255,136,0.1)", padding: "3px 10px" }}>{l}</span>
               ))}
             </div>
           </div>
@@ -124,11 +124,11 @@ export default function Skills() {
 
       {/* Tools */}
       <div style={{ marginTop: "20px", padding: isMobile ? "20px 16px" : "24px 28px", background: "var(--card-bg)", border: "1px solid rgba(255,255,255,0.05)", opacity: visible ? 1 : 0, transition: "opacity 0.5s 0.5s" }}>
-        <div style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.58rem", color: "var(--text-muted)", letterSpacing: "0.15em", marginBottom: "14px" }}>TOOLCHAIN &amp; UTILITIES</div>
+        <div style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.58rem", color: "var(--text-muted)", letterSpacing: "0.15em", marginBottom: "14px" }}>TOOLCHAIN &amp; UTILITIES</div>
         <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
           {TOOLS.map((tool) => (
             <span key={tool}
-              style={{ fontFamily: "'Share Tech Mono', monospace", fontSize: "0.68rem", color: "rgba(224,240,255,0.5)", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", padding: "6px 12px", transition: "all 0.2s", cursor: "default" }}
+              style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.68rem", color: "rgba(224,240,255,0.5)", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.07)", padding: "6px 12px", transition: "all 0.2s", cursor: "default" }}
               onMouseEnter={(e) => { e.currentTarget.style.color = "var(--neon-green)"; e.currentTarget.style.borderColor = "rgba(0,255,136,0.3)"; e.currentTarget.style.background = "rgba(0,255,136,0.05)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.color = "rgba(224,240,255,0.5)"; e.currentTarget.style.borderColor = "rgba(255,255,255,0.07)"; e.currentTarget.style.background = "rgba(255,255,255,0.03)"; }}>
               {tool}

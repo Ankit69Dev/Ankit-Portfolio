@@ -34,7 +34,7 @@ html {
 body {
   background: var(--bg);
   color: var(--text-primary);
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
   overflow-x: hidden;
 }
 
