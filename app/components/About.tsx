@@ -61,7 +61,7 @@ export default function About() {
       <div style={{ display: "flex", alignItems: "center", gap: "16px", marginBottom: isMobile ? "40px" : "64px" }}>
         <span style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: "0.7rem", color: "var(--neon-green)", letterSpacing: "0.2em" }}>01</span>
         <div style={{ width: "40px", height: "1px", background: "var(--neon-green)", boxShadow: "0 0 8px var(--neon-green)" }} />
-        <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? "1.1rem" : "1.4rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "0.15em", textTransform: "uppercase" }}>About</h2>
+         <h2 style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? "1.1rem" : "1.4rem", fontWeight: 700, color: "var(--text-primary)", letterSpacing: "0.15em" }}>About</h2>
         <div style={{ flex: 1, height: "1px", background: "rgba(0,255,136,0.1)" }} />
       </div>
 
